@@ -2,8 +2,9 @@ const mongoose = require('mongoose');
 // schema 開始 
 const postSchema = new mongoose.Schema(
     {
-      name: {
-        type: String,
+      user: {
+        type: mongoose.Schema.ObjectId,
+        ref: 'user',
         required: [true, '貼文姓名未填寫']
       },
       tags: [

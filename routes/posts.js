@@ -1,12 +1,18 @@
 var express = require('express');
 var router = express.Router();
 const Post = require('../models/posts');
+const User = require('../models/users');
 const errorHandle = require('../errorHandle');
 
 /* GET */
 router.get('/', async function(req, res, next) {
     try{
-        const posts = await Post.find();
+        const timeSort = req.query.timeSort == "asc" ? "createdAt":"-createdAt"
+        const q = req.query.q !== undefined ? {"content": new RegExp(req.query.q)} : {};
+        const posts = await Post.find(q).populate({
+            path: 'user',
+            select: 'name photo '
+        }).sort(timeSort);
         res.status(200).json({
             'status': 'success',
             data: {
@@ -21,10 +27,10 @@ router.get('/', async function(req, res, next) {
 /* POST */
 router.post('/', async function(req, res, next) {
     try {
-        const { name, content, tags, type } = req.body;
+        const { user, content, tags, type } = req.body;
         if (content && content.trim() !== '') {
             const newPost = await Post.create({
-                name: name,
+                user: user,
                 content: content.trim(),
                 tags: tags,
                 type: type
