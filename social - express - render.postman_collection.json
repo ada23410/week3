@@ -34,7 +34,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\":\"Kyson\",\n    \"content\": \"今天要倒垃圾\",\n    \"tags\": [\n        \"電影\",\n        \"運動\"\n    ],\n    \"type\": \"group\"\n}",
+					"raw": "{\n    \"user\":\"662f364619039dcf42a511cc\",\n    \"content\": \"運動很健康！！\",\n    \"image\": \"https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\n    \"tags\": [\n        \"運動\",\n        \"健康\"\n    ],\n    \"type\": \"group\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -84,7 +84,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "https://week3-w842.onrender.com/posts/662b5a5886a4b0f9b80b2183",
+					"raw": "https://week3-w842.onrender.com/posts/66363ee60fbd493a73888d01",
 					"protocol": "https",
 					"host": [
 						"week3-w842",
@@ -93,7 +93,7 @@
 					],
 					"path": [
 						"posts",
-						"662b5a5886a4b0f9b80b2183"
+						"66363ee60fbd493a73888d01"
 					]
 				}
 			},
@@ -106,7 +106,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\":\"Aida（修）\",\n    \"content\": \"今天要倒垃圾\",\n    \"tags\": [\n        \"電影\",\n        \"運動\"\n    ],\n    \"type\": \"group\"\n}",
+					"raw": "{\n    \"content\": \"今天要記得倒垃圾（好累\",\n    \"image\": \"https://images.unsplash.com/photo-1711333927183-6a6730c9ea6c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\n    \"tags\": [\n        \"日常\"\n    ],\n    \"type\": \"group\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -114,7 +114,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://week3-w842.onrender.com/posts/6628787304713ee7f42b8690",
+					"raw": "https://week3-w842.onrender.com/posts/663640440fbd493a73888d0c",
 					"protocol": "https",
 					"host": [
 						"week3-w842",
@@ -123,7 +123,7 @@
 					],
 					"path": [
 						"posts",
-						"6628787304713ee7f42b8690"
+						"663640440fbd493a73888d0c"
 					]
 				}
 			},
