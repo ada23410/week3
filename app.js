@@ -1,21 +1,21 @@
-var express = require('express');
-var cors = require('cors');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const express = require('express');
+const cors = require('cors');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 
 // 資料庫設定開始
 const mongoose = require('mongoose');
-const dotenv= require('dotenv');
+// const dotenv= require('dotenv');
 
-dotenv.config({path:"./config.env"});
+// dotenv.config({path:"./config.env"});
 
-const DB = process.env.DATABASE.replace(
-    '<password>',
-    encodeURIComponent(process.env.DATABASE_PASSWORD)
-)
+// const DB = process.env.DATABASE.replace(
+//     '<password>',
+//     encodeURIComponent(process.env.DATABASE_PASSWORD)
+// )
 
-mongoose.connect(DB)
+mongoose.connect('mongodb://localhost:27017/social')
     .then(res=> console.log("連線資料成功"))
     .catch((error)=> {console.log('資料連線失敗',error)});
 
@@ -52,9 +52,9 @@ app.use((req, res, next) => {
     });
 });
 
-// const port = process.env.PORT || 3000; 
-// app.listen(port, () => {
-//     console.log(`Server is running on port ${port}`);
-// });
+const port = process.env.PORT || 3000; 
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+});
 
 module.exports = app;
